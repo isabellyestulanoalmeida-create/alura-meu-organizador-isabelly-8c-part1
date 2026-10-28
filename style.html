@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Isa Organizador</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Fonte Inter do Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Elementos 3D Flutuantes no Fundo -->
+  <div class="background-3d-scene">
+    <div class="cube cube-1">
+      <div class="face front"></div>
+      <div class="face back"></div>
+      <div class="face right"></div>
+      <div class="face left"></div>
+      <div class="face top"></div>
+      <div class="face bottom"></div>
+    </div>
+    <div class="cube cube-2">
+      <div class="face front"></div>
+      <div class="face back"></div>
+      <div class="face right"></div>
+      <div class="face left"></div>
+      <div class="face top"></div>
+      <div class="face bottom"></div>
+    </div>
+    <div class="sphere sphere-1"></div>
+  </div>
+
+  <!-- Conteúdo Principal -->
+  <div class="container">
+    <header class="header">
+      <h1 class="gradient-text">Isa Organizador</h1>
+      <p class="description">
+        Sua plataforma inteligente e intuitiva para gerenciar tarefas diárias, organizar rotinas pessoais e alcançar o máximo de produtividade sem complicação.
+      </p>
+    </header>
+
+    <main class="grid-container">
+      <!-- Card 1 -->
+      <div class="card" onclick="openModal('modal-rotina')">
+        <div class="card-icon">⚡</div>
+        <h3>Rotinas Matinais</h3>
+        <p>Defina hábitos para começar o dia com foco e energia renovada.</p>
+        <span class="card-link">Ver detalhes &rarr;</span>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="card" onclick="openModal('modal-tarefas')">
+        <div class="card-icon">🎯</div>
+        <h3>Gerenciador de Tarefas</h3>
+        <p>Organize suas prioridades por categorias e prazos de entrega.</p>
+        <span class="card-link">Ver detalhes &rarr;</span>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="card" onclick="openModal('modal-habitos')">
+        <div class="card-icon">📊</div>
+        <h3>Rastreamento de Hábitos</h3>
+        <p>Acompanhe sua evolução diária e mantenha a consistência.</p>
+        <span class="card-link">Ver detalhes &rarr;</span>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="card" onclick="openModal('modal-metas')">
+        <div class="card-icon">🚀</div>
+        <h3>Metas & Objetivos</h3>
+        <p>Planeje suas grandes conquistas dividindo-as em metas menores.</p>
+        <span class="card-link">Ver detalhes &rarr;</span>
+      </div>
+    </main>
+  </div>
+
+  <!-- Modais Interativos -->
+  <div id="modal-backdrop" class="modal-backdrop" onclick="closeModal()"></div>
+
+  <!-- Modal 1 -->
+  <div id="modal-rotina" class="modal">
+    <button class="close-btn" onclick="closeModal()">&times;</button>
+    <div class="modal-header">
+      <span class="modal-icon">⚡</span>
+      <h2>Rotinas Matinais</h2>
+    </div>
+    <div class="modal-body">
+      <p>Estruturar uma rotina ao acordar reduz a fadiga de decisão e melhora sua produtividade ao longo de todo o dia.</p>
+      <ul>
+        <li><b>Dica de Ouro:</b> Comece o dia com 10 minutos de meditação ou leitura.</li>
+        <li><b>Ação:</b> Prepare sua lista de afazeres na noite anterior.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Modal 2 -->
+  <div id="modal-tarefas" class="modal">
+    <button class="close-btn" onclick="closeModal()">&times;</button>
+    <div class="modal-header">
+      <span class="modal-icon">🎯</span>
+      <h2>Gerenciador de Tarefas</h2>
+    </div>
+    <div class="modal-body">
+      <p>O segredo da organização é a priorização. Divida seus afazeres em categorias claras: Urgente, Importante e Secundário.</p>
+      <ul>
+        <li><b>Técnica Pomodoro:</b> Trabalhe focado por 25 minutos e descanse 5.</li>
+        <li><b>Regra dos 2 Minutos:</b> Se algo leva menos de 2 minutos, faça imediatamente!</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Modal 3 -->
+  <div id="modal-habitos" class="modal">
+    <button class="close-btn" onclick="closeModal()">&times;</button>
+    <div class="modal-header">
+      <span class="modal-icon">📊</span>
+      <h2>Rastreamento de Hábitos</h2>
+    </div>
+    <div class="modal-body">
+      <p>Construir hábitos duradouros exige consistência visual para manter a motivação em alta.</p>
+      <ul>
+        <li><b>Corrente Diária:</b> Marque no calendário cada dia concluído sem quebrar a sequência.</li>
+        <li><b>Recompensa:</b> Defina pequenas recompensas ao atingir marcas de 7, 15 e 30 dias.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Modal 4 -->
+  <div id="modal-metas" class="modal">
+    <button class="close-btn" onclick="closeModal()">&times;</button>
+    <div class="modal-header">
+      <span class="modal-icon">🚀</span>
+      <h2>Metas & Objetivos</h2>
+    </div>
+    <div class="modal-body">
+      <p>Grandes sonhos tornam-se realidade quando são transformados em passos práticos diários.</p>
+      <ul>
+        <li><b>Metas SMART:</b> Torne seus objetivos específicos, mensuráveis e com prazos claros.</li>
+        <li><b>Revisão Semanal:</b> Reserve o domingo para avaliar seu progresso e reajustar rotas.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- JavaScript para Modal -->
+  <script>
+    function openModal(id) {
+      document.getElementById('modal-backdrop').classList.add('active');
+      document.getElementById(id).classList.add('active');
+    }
+
+    function closeModal() {
+      document.getElementById('modal-backdrop').classList.remove('active');
+      const modals = document.querySelectorAll('.modal');
+      modals.forEach(m => m.classList.remove('active'));
+    }
+  </script>
+</body>
+</html>
